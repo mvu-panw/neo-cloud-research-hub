@@ -1,0 +1,428 @@
+/* ---------- Fonts ---------- */
+@font-face { font-family: "Figtree"; font-weight: 300; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-Light.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 300; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-LightItalic.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 400; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 400; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-Italic.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 500; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 500; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-MediumItalic.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 600; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 600; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-SemiBoldItalic.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 700; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 700; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-BoldItalic.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 800; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-ExtraBold.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 800; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-ExtraBoldItalic.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 900; font-style: normal; src: url("../assets/fonts/Figtree font/Figtree-Black.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 900; font-style: italic; src: url("../assets/fonts/Figtree font/Figtree-BlackItalic.ttf") format("truetype"); }
+
+/* ---------- Tokens ---------- */
+:root {
+  --bg: #05070c;
+  --bg-elevated: #0d121b;
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --text: #f4f6f9;
+  --text-muted: #9aa5b5;
+  --blue: #7db8ff;
+  --blue-strong: #3b7bff;
+  --orange: #fa582d;
+  --error: #ff6b6b;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 32px;
+  background: rgba(5, 7, 12, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-badge > img {
+  height: 52px;
+  width: auto;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 24px;
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+.site-nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-nav a:hover { color: var(--text); }
+
+.site-nav a.active {
+  color: var(--text);
+  border-bottom-color: var(--blue-strong);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  cursor: default;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-dropdown-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.15s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-label,
+.nav-dropdown:focus-within .nav-dropdown-label {
+  color: var(--text);
+}
+
+.nav-dropdown-label.active {
+  color: var(--text);
+  border-bottom-color: var(--blue-strong);
+}
+
+.nav-dropdown:hover .nav-dropdown-caret,
+.nav-dropdown:focus-within .nav-dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 30;
+  min-width: 260px;
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  background: var(--bg-elevated);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+.btn-primary { background: var(--blue-strong); color: #fff; width: 100%; }
+.btn-primary:hover { background: #2f6ae8; }
+
+.btn-link {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Page header ---------- */
+.page-header {
+  width: 100%;
+  padding: 64px 32px 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  margin: 0 0 10px;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.page-header p { color: var(--text-muted); margin: 0; max-width: 560px; }
+
+/* ---------- Resource cards ---------- */
+.resource-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto 96px;
+  padding: 0 32px;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  background: var(--bg-elevated);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.resource-card:hover {
+  border-color: var(--blue-strong);
+  transform: translateY(-3px);
+}
+
+.resource-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.resource-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Embedded documents ---------- */
+.embed-wrap {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+
+.embed-frame {
+  position: relative;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  height: 80vh;
+  min-height: 700px;
+}
+
+.embed-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-open-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.embed-open-link:hover { text-decoration: underline; }
+
+.embed-placeholder-note {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  background: var(--bg-elevated);
+}
+
+.embed-placeholder-note code {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--blue);
+}
+
+/* ---------- Login / password gate ---------- */
+main.gate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.gate-panel { width: 100%; max-width: 400px; }
+
+.gate-panel .logo-badge {
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.gate-panel .logo-badge > img { height: 44px; }
+
+.card {
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  background: var(--bg-elevated);
+}
+
+.card h1 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.card p.subtitle {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--panel-border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--blue-strong);
+}
+
+.form-error {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin: 0 0 16px;
+  min-height: 1.2em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 28px 32px;
+  border-top: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover { color: var(--text); }
+
+@media (max-width: 640px) {
+  .site-header { padding: 12px 20px; }
+  .site-nav { margin-left: 20px; column-gap: 18px; }
+  .page-header { padding: 48px 20px 24px; }
+  .resource-grid { padding: 0 20px; }
+  .embed-wrap { padding: 0 20px; }
+}
