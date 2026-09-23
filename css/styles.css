@@ -419,10 +419,35 @@ main.gate {
 
 .site-footer a:hover { color: var(--text); }
 
+.nav-dropdown-label:focus-visible { outline: 2px solid var(--blue-strong); outline-offset: 2px; border-radius: 4px; }
+
+@media (max-width: 900px) {
+  .site-header { flex-wrap: wrap; row-gap: 10px; padding: 12px 20px; }
+  .logo-badge > img { height: 40px; }
+  .site-nav { width: 100%; margin-left: 0; margin-right: 0; column-gap: 20px; }
+  .site-nav a, .nav-dropdown-label { padding: 10px 2px; }
+  .nav-dropdown { position: static; }
+  .nav-dropdown-menu {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    min-width: 0;
+  }
+  .nav-dropdown-menu a { padding: 12px; }
+}
+
 @media (max-width: 640px) {
-  .site-header { padding: 12px 20px; }
-  .site-nav { margin-left: 20px; column-gap: 18px; }
-  .page-header { padding: 48px 20px 24px; }
-  .resource-grid { padding: 0 20px; }
+  .site-header { position: relative; }
+  .page-header { padding: 40px 20px 20px; }
+  .page-header h1 { font-size: 1.7rem; }
+  .resource-grid { padding: 0 20px; gap: 16px; margin-bottom: 56px; grid-template-columns: 1fr; }
+  .resource-card { padding: 22px; }
   .embed-wrap { padding: 0 20px; }
+  .embed-frame { min-height: 500px; }
+  .site-footer { padding: 24px 20px; }
+}
+
+@media (hover: none) {
+  .nav-dropdown:hover .nav-dropdown-menu { opacity: 0; visibility: hidden; }
+  .nav-dropdown:focus-within .nav-dropdown-menu { opacity: 1; visibility: visible; }
 }
