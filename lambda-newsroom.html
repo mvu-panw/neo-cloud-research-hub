@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home — Neo-Cloud Research</title>
+  <title>Lambda AI Newsroom — Neo-Cloud Research</title>
   <link rel="stylesheet" href="css/styles.css?v=5" />
 </head>
 <body>
@@ -23,13 +23,13 @@
         </div>
       </div>
       <div class="nav-dropdown">
-        <span class="nav-dropdown-label" tabindex="0">Lambda AI <span class="nav-dropdown-caret"></span></span>
+        <span class="nav-dropdown-label active" tabindex="0">Lambda AI <span class="nav-dropdown-caret"></span></span>
         <div class="nav-dropdown-menu">
           <a href="lambda-regions.html">Regions</a>
           <a href="lambda-network-security.html">Network &amp; Security Infrastructure</a>
           <a href="lambda-compute.html">Compute Infrastructure</a>
           <a href="lambda-blogs.html">Blogs</a>
-          <a href="lambda-newsroom.html">Newsroom</a>
+          <a href="lambda-newsroom.html" class="active">Newsroom</a>
         </div>
       </div>
       <div class="nav-dropdown">
@@ -47,22 +47,14 @@
   </header>
 
   <div class="page-header">
-    <h1>Neo-Cloud Research</h1>
-    <p>Resources compiled from CoreWeave, Lambda AI, and Nebius.</p>
+    <h1>Lambda AI: Newsroom</h1>
+    <p>Press releases and company announcements.</p>
   </div>
 
   <div class="resource-grid">
-    <a class="resource-card" href="coreweave-regions.html">
-      <h3>CoreWeave</h3>
-      <p>Regions, networking, compute, and blogs for CoreWeave.</p>
-    </a>
-    <a class="resource-card" href="lambda-regions.html">
-      <h3>Lambda AI</h3>
-      <p>Regions, networking, compute, and blogs for Lambda AI.</p>
-    </a>
-    <a class="resource-card" href="nebius-regions.html">
-      <h3>Nebius</h3>
-      <p>Regions, networking, compute, and blogs for Nebius.</p>
+    <a class="resource-card" href="https://lambda.ai/blog/tag/announcements" target="_blank" rel="noopener noreferrer">
+      <h3>Lambda AI Newsroom</h3>
+      <p>Latest news and announcements from Lambda AI.</p>
     </a>
     <!--
       Add a card per resource:
@@ -72,41 +64,6 @@
       </a>
     -->
   </div>
-
-  <section class="news-section">
-    <h2 class="section-heading">Neo-Cloud News</h2>
-    <div class="news-wrap" id="news-content">
-      <p class="news-note">Loading news&hellip; If nothing appears, <a href="news.md">open news.md</a>.</p>
-    </div>
-  </section>
-  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
-  <script>
-    (function () {
-      var el = document.getElementById("news-content");
-      if (!window.marked) return;
-      fetch("news.md").then(function (r) { if (!r.ok) throw 0; return r.text(); })
-        .then(function (md) {
-          var tmp = document.createElement("div");
-          tmp.innerHTML = marked.parse(md);
-          var out = document.createElement("div");
-          out.className = "news-grid";
-          var card = null;
-          Array.prototype.slice.call(tmp.childNodes).forEach(function (n) {
-            if (n.nodeName === "H2" || !card) {
-              card = document.createElement("article");
-              card.className = "news-card";
-              out.appendChild(card);
-            }
-            card.appendChild(n);
-          });
-          out.querySelectorAll("a").forEach(function (a) { a.target = "_blank"; a.rel = "noopener noreferrer"; });
-          out.querySelectorAll("li > strong:first-child").forEach(function (s) { s.classList.add("news-date"); });
-          el.innerHTML = "";
-          el.appendChild(out);
-        })
-        .catch(function () {});
-    })();
-  </script>
 
   <footer class="site-footer">
     <span>Palo Alto Networks</span>

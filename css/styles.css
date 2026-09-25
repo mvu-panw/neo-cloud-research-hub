@@ -271,6 +271,83 @@ a { color: inherit; }
   font-size: 0.9rem;
 }
 
+/* ---------- Home news section ---------- */
+.news-section { width: 100%; }
+
+.section-heading {
+  max-width: 1180px;
+  margin: 0 auto 20px;
+  padding: 0 32px;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+/* ---------- News (rendered from news.md) ---------- */
+.news-wrap {
+  max-width: 1180px;
+  margin: 0 auto 72px;
+  padding: 0 32px;
+}
+
+.news-note { color: var(--text-muted); }
+.news-note a { color: var(--blue); }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.news-card {
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  background: var(--bg-elevated);
+  line-height: 1.55;
+}
+
+.news-card h2 {
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--panel-border);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.news-card h3 { margin: 20px 0 8px; font-size: 1.05rem; font-weight: 700; }
+.news-card p { margin: 0 0 12px; color: var(--text-muted); font-size: 0.92rem; }
+.news-card ul { margin: 0; padding: 0; list-style: none; }
+
+.news-card li {
+  padding: 14px 0;
+  border-top: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.news-card li:first-child { border-top: 0; padding-top: 0; }
+.news-card li:last-child { padding-bottom: 0; }
+
+.news-card .news-date {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(59, 123, 255, 0.15);
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.news-card strong { color: var(--text); }
+.news-card a { color: var(--blue); text-decoration: none; }
+.news-card a:hover { text-decoration: underline; }
+
+.news-card table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.news-card th, .news-card td { padding: 8px; border-bottom: 1px solid var(--panel-border); text-align: left; }
+
 /* ---------- Embedded documents ---------- */
 .embed-wrap {
   width: 100%;
@@ -444,6 +521,10 @@ main.gate {
   .resource-card { padding: 22px; }
   .embed-wrap { padding: 0 20px; }
   .embed-frame { min-height: 500px; }
+  .section-heading { padding: 0 20px; font-size: 1.35rem; }
+  .news-wrap { padding: 0 20px; margin-bottom: 48px; }
+  .news-grid { grid-template-columns: 1fr; }
+  .news-card { padding: 22px; }
   .site-footer { padding: 24px 20px; }
 }
 
