@@ -1,6 +1,23 @@
 ## CoreWeave
 
-- Recent items not yet populated. Its newsroom page returned no dates and looked stale when last checked; see [CoreWeave Newsroom](https://www.coreweave.com/newsroom).
+### Press releases
+
+- **Sep 23, 2026:** Became the only provider to earn the SemiAnalysis Platinum ClusterMAX rating three consecutive times. [Source](https://www.coreweave.com/news/coreweave-becomes-the-only-provider-to-earn-semianalysis-platinum-clustermax-tm-rating-three-consecutive-times)
+- **Sep 23, 2026:** Harell Data selected CoreWeave to power its secure platform for AI model training.
+- **Sep 16, 2026:** Brought up a multi-rack NVIDIA Vera Rubin NVL72 cluster.
+- **Sep 10, 2026:** Launched Physical AI Field Engineering to turn proprietary data into production AI.
+- **Sep 9, 2026:** Parallel Works and CoreWeave to accelerate DARPA biological research with a fully managed AI cloud environment.
+- **Aug 25, 2026:** Rescale expanded its cloud ecosystem with CoreWeave for engineering and AI workloads.
+- **Aug 20, 2026:** Hudson River Trading to build a next-gen research platform powered by NVIDIA Vera Rubin NVL72 on CoreWeave Cloud.
+- **Aug 6, 2026:** IMC selected CoreWeave as the firm deepens its research investment.
+- **Aug 5, 2026:** Signed a multi-year agreement with Solidigm to strengthen its integrated AI cloud platform.
+
+### Blog
+
+- **Sep 24, 2026:** [CoreWeave Mission Control Agent Brings Operational Intelligence to AI Workloads](https://www.coreweave.com/blog/coreweave-mission-control-agent-brings-operational-intelligence-to-ai-workloads)
+- **Sep 22, 2026:** [Bringing Enterprise Identity and Key Control to AI on CoreWeave](https://www.coreweave.com/blog/bringing-enterprise-identity-and-key-control-to-ai-on-coreweave)
+- **Sep 16, 2026:** [CoreWeave Leads Cloud Providers in MLPerf Inference v6.1 Performance](https://www.coreweave.com/blog/coreweave-leads-cloud-providers-in-mlperf-r-inference-v6-1-performance-with-nvidia-blackwell-ultra)
+- **Sep 16, 2026:** [New in CoreWeave AI Object Storage: Cross-Region Writes and Archive Storage](https://www.coreweave.com/blog/new-in-coreweave-ai-object-storage-cross-region-writes-and-archive-storage)
 
 ## Lambda AI
 
