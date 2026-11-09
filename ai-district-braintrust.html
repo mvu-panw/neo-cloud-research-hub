@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI District Braintrust — Neo-Cloud Research</title>
+  <link rel="stylesheet" href="css/styles.css?v=6" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo-badge" href="index.html">
+      <img src="assets/images/panw_RGB_Logo_Negative.png" alt="Palo Alto Networks" />
+    </a>
+    <nav class="site-nav">
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-label" tabindex="0">CoreWeave <span class="nav-dropdown-caret"></span></span>
+        <div class="nav-dropdown-menu">
+          <a href="coreweave-regions.html">Regions</a>
+          <a href="coreweave-network-security.html">Network &amp; Security Infrastructure</a>
+          <a href="coreweave-compute.html">Compute Infrastructure</a>
+          <a href="coreweave-blogs.html">Blogs</a>
+          <a href="coreweave-newsroom.html">Newsroom</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-label" tabindex="0">Lambda AI <span class="nav-dropdown-caret"></span></span>
+        <div class="nav-dropdown-menu">
+          <a href="lambda-regions.html">Regions</a>
+          <a href="lambda-network-security.html">Network &amp; Security Infrastructure</a>
+          <a href="lambda-compute.html">Compute Infrastructure</a>
+          <a href="lambda-blogs.html">Blogs</a>
+          <a href="lambda-newsroom.html">Newsroom</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-label" tabindex="0">Nebius <span class="nav-dropdown-caret"></span></span>
+        <div class="nav-dropdown-menu">
+          <a href="nebius-regions.html">Regions</a>
+          <a href="nebius-network-security.html">Network &amp; Security Infrastructure</a>
+          <a href="nebius-compute.html">Compute Infrastructure</a>
+          <a href="nebius-blogs.html">Blogs</a>
+          <a href="nebius-newsroom.html">Newsroom</a>
+        </div>
+      </div>
+      <a href="ai-district-braintrust.html" class="active">AI District Braintrust</a>
+      <a href="https://mlperf-dashboard-final-50577619532.us-west1.run.app/" target="_blank" rel="noopener noreferrer">MLPerf Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1>AI District Braintrust</h1>
+    <p>How money moves through the AI compute chain. Frontier labs (OpenAI, Anthropic) commit spend to neoclouds (CoreWeave, Lambda, Nebius), and the neoclouds turn it into NVIDIA GPU purchases.</p>
+  </div>
+
+  <!-- ---------- Headline figures ---------- -->
+  <section class="data-section">
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-value">$41.3B</div>
+        <p class="stat-label">Anthropic&rsquo;s committed spend with Lambda through 2034, per Anthropic&rsquo;s S-1 <span class="tag tag-disclosed">Disclosed</span></p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">$22.4B</div>
+        <p class="stat-label">OpenAI&rsquo;s total contract value with CoreWeave, running through May 2031 <span class="tag tag-disclosed">Disclosed</span></p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">$55&ndash;64B</div>
+        <p class="stat-label">2026 capex guidance for CoreWeave ($35&ndash;39B) and Nebius ($20&ndash;25B) combined, mostly NVIDIA systems <span class="tag tag-disclosed">Disclosed</span></p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">$4B</div>
+        <p class="stat-label">New NVIDIA equity in 2026: $2B into CoreWeave and $2B into Nebius <span class="tag tag-disclosed">Disclosed</span></p>
+      </div>
+    </div>
+    <p class="data-asof">As of November 9, 2026. CoreWeave reports Q3 2026 results on November 10, 2026. <span class="tag tag-disclosed">Disclosed</span> means company filings or press releases. <span class="tag tag-reported">Reported</span> means press reports only. <span class="tag tag-estimate">Estimate</span> means derived on this page, with the method shown.</p>
+  </section>
+
+  <!-- ---------- Labs -> Neoclouds ---------- -->
+  <section class="data-section">
+    <h2 class="section-heading">AI labs &rarr; neoclouds</h2>
+    <p class="data-lede">Spend to date (2023&ndash;2026 YTD) and forward commitments for each lab and neocloud pair. No neocloud reports revenue by lab, so historical spend is mostly bounded, not stated.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Lab &rarr; Neocloud</th>
+            <th>Spent 2023&ndash;2026 YTD</th>
+            <th>Committed (next ~3+ yrs)</th>
+            <th>Term / structure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OpenAI &rarr; CoreWeave</strong></td>
+            <td>Under $0.51B in 2025. OpenAI was below CoreWeave&rsquo;s 10% customer threshold on $5.1B of 2025 revenue. Contracted capacity began ramping in 2026.<sup><a href="#s3">3</a></sup><br><span class="tag tag-estimate">Estimate</span></td>
+            <td class="num"><strong>Up to $22.4B</strong><br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td>$11.9B (Mar 2025, through Oct 2030), plus $4B (May 2025), plus $6.5B (Sep 2025, through May 2031). OpenAI also received $350M of CoreWeave stock. Forbes estimates OpenAI is about one-third of CoreWeave&rsquo;s contracted revenue.<sup><a href="#s1">1</a>,<a href="#s2">2</a>,<a href="#s4">4</a></sup></td>
+          </tr>
+          <tr>
+            <td><strong>Anthropic &rarr; CoreWeave</strong></td>
+            <td>None disclosed. The deal was signed on Apr 10, 2026, with compute coming online in late 2026.<sup><a href="#s5">5</a></sup><br><span class="tag tag-none">Not disclosed</span></td>
+            <td class="num">&ldquo;Multibillion-dollar&rdquo;<br><span class="tag tag-reported">Reported</span></td>
+            <td>Multi-year and phased, with room to expand. Terms were not disclosed. Anthropic&rsquo;s S-1/A does not name CoreWeave as a counterparty.<sup><a href="#s5">5</a>,<a href="#s6">6</a></sup></td>
+          </tr>
+          <tr>
+            <td><strong>Anthropic &rarr; Lambda</strong></td>
+            <td>Not disclosed. Payment comes only as capacity is delivered and accepted.<br><span class="tag tag-none">Not disclosed</span></td>
+            <td class="num"><strong>$41.3B</strong><br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td>Runs through 2034. About $35B was signed in Aug 2026, which took Lambda&rsquo;s backlog from $15B to $50B (roughly 70% Anthropic). Either party can terminate $34.9B of it if Lambda doesn&rsquo;t secure the facility lease in time.<sup><a href="#s6">6</a>,<a href="#s7">7</a>,<a href="#s8">8</a></sup></td>
+          </tr>
+          <tr>
+            <td><strong>OpenAI &rarr; Lambda</strong></td>
+            <td colspan="3" class="muted">No public contract found. Lambda&rsquo;s other anchor customers are Microsoft (a multibillion-dollar GB300 deal) and NVIDIA (a leaseback).<sup><a href="#s9">9</a></sup> <span class="tag tag-none">Not disclosed</span></td>
+          </tr>
+          <tr>
+            <td><strong>OpenAI &rarr; Nebius</strong><br><strong>Anthropic &rarr; Nebius</strong></td>
+            <td colspan="3" class="muted">No public contract found. Nebius&rsquo;s anchor customers are Microsoft ($17.4B, through 2031) and Meta (up to $27B over 5 years, announced Mar 2026). Anthropic&rsquo;s S-1 lists Nscale ($44.6B) as its other neocloud commitment, not Nebius.<sup><a href="#s6">6</a>,<a href="#s10">10</a></sup> <span class="tag tag-none">Not disclosed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-note"><strong>Context.</strong> Until 2026, Microsoft drove neocloud revenue, not the labs. Microsoft was 35%, 62%, and 67% of CoreWeave&rsquo;s revenue in 2023, 2024, and 2025.<sup><a href="#s3">3</a></sup> Most of Anthropic&rsquo;s capacity comes from hyperscalers and chip vendors. Its S-1 lists Google Cloud ($114.5B), AWS ($110B), Microsoft Azure (at least $44.9B), SpaceX.AI ($120.5B of NVIDIA GPU compute), and Broadcom TPU leases (about $161B). Aggregate commitments are about $895B, so the neocloud deals are a small slice.<sup><a href="#s6">6</a>,<a href="#s11">11</a></sup></p>
+  </section>
+
+  <!-- ---------- Neoclouds -> NVIDIA ---------- -->
+  <section class="data-section">
+    <h2 class="section-heading">Neoclouds &rarr; NVIDIA</h2>
+    <p class="data-lede">None of the three reports &ldquo;spend with NVIDIA&rdquo; as a line item. Capex is used as the proxy, since it is mostly NVIDIA GPU systems bought through OEMs such as Dell, plus networking and data center build-out. Read it as an upper bound on direct NVIDIA spend.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Neocloud</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>2026 (guidance)</th>
+            <th>2027&ndash;2029 outlook</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CoreWeave</strong></td>
+            <td class="num">$2.9B<br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td class="num">$8.7B<br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td class="num">$10.3B cash<br><span class="muted">($14.9B capex incl. leases)</span><br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td class="num"><strong>$35&ndash;39B</strong><br><span class="muted">Q1 $7.7B, Q2 $9.4B</span><br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td>No formal guidance. The CEO called NVIDIA&rsquo;s $2B investment about 2% of planned infrastructure spend, which implies roughly $100B toward more than 5 GW by 2030. Backlog was $104B at Q2 2026.<sup><a href="#s12">12</a>,<a href="#s13">13</a></sup><br><span class="tag tag-reported">Reported</span></td>
+          </tr>
+          <tr>
+            <td><strong>Nebius</strong></td>
+            <td class="muted">Not comparable (pre-Yandex-separation)</td>
+            <td class="num">$0.81B<br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td class="num">$4.1B<br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td class="num"><strong>$20&ndash;25B</strong><br><span class="muted">H1 $8.1B</span><br><span class="tag tag-disclosed">Disclosed</span></td>
+            <td>Targets 5 GW contracted by year-end 2026, brought online over the following 2&ndash;3.5 years. About $40B of committed backlog can be borrowed against.<sup><a href="#s14">14</a>,<a href="#s15">15</a></sup><br><span class="tag tag-disclosed">Disclosed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Lambda</strong> <span class="muted">(private)</span></td>
+            <td colspan="4" class="muted">Capex is not disclosed. GPU purchases are debt-financed: $500M from Macquarie (Apr 2024) and about $1B of JPMorgan-arranged private debt for NVIDIA GPUs leased to Microsoft (May 2026). It is raising up to $4B before an IPO.<sup><a href="#s9">9</a>,<a href="#s16">16</a></sup> <span class="tag tag-reported">Reported</span></td>
+            <td>Delivering $41.3B of Anthropic capacity through 2034 means a multi-year GPU build of tens of billions of dollars. That depends on financing and facility leases.<br><span class="tag tag-estimate">Estimate</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-asof">CoreWeave&rsquo;s 2023&ndash;2025 figures are cash purchases of property and equipment from its 10-K, and its 2025 capex including leases is a non-GAAP figure. Nebius&rsquo;s figures are reported capital expenditures.</p>
+
+    <h3 class="section-heading" style="font-size:1.2rem;margin-top:36px;">NVIDIA money flowing back</h3>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Neocloud</th><th>NVIDIA &rarr; neocloud</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CoreWeave</strong></td>
+            <td>A <strong>$6.3B</strong> commitment to buy CoreWeave&rsquo;s unsold capacity through Apr 2032 (Sep 2025). A <strong>$2B</strong> equity purchase at $87.20/share (Jan 26, 2026). NVIDIA also rents CoreWeave clusters for internal R&amp;D.<sup><a href="#s12">12</a></sup></td>
+            <td>Backstop, equity, and customer<br><span class="tag tag-disclosed">Disclosed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Nebius</strong></td>
+            <td>A <strong>$2B</strong> purchase of pre-funded warrants (Mar 2026). Including its Dec 2024 round participation, NVIDIA holds about 9.3% per a Jul 2026 13G.<sup><a href="#s17">17</a></sup></td>
+            <td>Equity<br><span class="tag tag-disclosed">Disclosed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Lambda</strong></td>
+            <td>A <strong>$1.5B</strong> four-year leaseback of 18,000 GPUs, which makes NVIDIA one of Lambda&rsquo;s largest customers. NVIDIA is also an existing investor.<sup><a href="#s9">9</a></sup></td>
+            <td>Customer and equity<br><span class="tag tag-reported">Reported</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-note"><strong>The loop.</strong> Lab commitments, such as OpenAI&rsquo;s $22.4B with CoreWeave and Anthropic&rsquo;s $41.3B with Lambda, back the debt that neoclouds use to buy NVIDIA systems. NVIDIA in turn puts capital and demand guarantees back into those neoclouds ($6.3B + $2B for CoreWeave, $2B for Nebius, $1.5B for Lambda). The same dollar of AI demand shows up in lab commitments, neocloud backlog, and NVIDIA revenue.</p>
+  </section>
+
+  <!-- ---------- Sources ---------- -->
+  <section class="data-section">
+    <h2 class="section-heading">Sources</h2>
+    <ol class="source-list">
+      <li id="s1"><a href="https://investors.coreweave.com/news/news-details/2025/CoreWeave-Expands-Agreement-with-OpenAI-by-up-to-6-5B/default.aspx" target="_blank" rel="noopener noreferrer">CoreWeave: Expands Agreement with OpenAI by up to $6.5B (Sep 2025)</a></li>
+      <li id="s2"><a href="https://www.cnbc.com/2025/09/25/coreweave-openai-6point5-billion-deal.html" target="_blank" rel="noopener noreferrer">CNBC: CoreWeave inks $6.5 billion deal with OpenAI</a></li>
+      <li id="s3"><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm" target="_blank" rel="noopener noreferrer">CoreWeave Form 10-K, FY2025 (customer concentration, capex)</a></li>
+      <li id="s4"><a href="https://www.forbes.com/sites/phoebeliu/2026/04/29/coreweave-depends-on-openai-what-if-the-ai-chatgpt-maker-cant-pay-up/" target="_blank" rel="noopener noreferrer">Forbes: OpenAI Is A Third Of CoreWeave&rsquo;s Business (Apr 2026)</a></li>
+      <li id="s5"><a href="https://www.businesswire.com/news/home/20260410890996/en/CoreWeave-Announces-Multi-Year-Agreement-With-Anthropic" target="_blank" rel="noopener noreferrer">CoreWeave: Multi-Year Agreement With Anthropic (Apr 10, 2026)</a></li>
+      <li id="s6"><a href="https://www.futuriom.com/articles/news/why-anthropic-is-banking-on-future-compute/2026/10" target="_blank" rel="noopener noreferrer">Futuriom: Anthropic&rsquo;s S-1 Reveals Complex Mosaic of Compute Contract Risks (Oct 2026)</a></li>
+      <li id="s7"><a href="https://www.decodingdiscontinuity.com/p/anthropic-s1-compute-commitments" target="_blank" rel="noopener noreferrer">Decoding Discontinuity: Anthropic S-1 compute commitments</a></li>
+      <li id="s8"><a href="https://dealroom.co/news/160600-lambda-to-raise-4b-pre-ipo-leaning-on-35b-anthropic-deal/" target="_blank" rel="noopener noreferrer">Dealroom: Lambda to raise $4B pre-IPO, leaning on $35B Anthropic deal</a></li>
+      <li id="s9"><a href="https://research.contrary.com/company/lambda" target="_blank" rel="noopener noreferrer">Contrary Research: Lambda business breakdown</a></li>
+      <li id="s10"><a href="https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta" target="_blank" rel="noopener noreferrer">Nebius: New AI infrastructure agreement with Meta (Mar 2026)</a></li>
+      <li id="s11"><a href="https://www.datacenterdynamics.com/en/news/anthropic-s-1-update-reveals-8954bn-in-cloud-and-data-center-commitments/" target="_blank" rel="noopener noreferrer">DCD: Anthropic S-1 update reveals $895.4bn in cloud and data center commitments</a></li>
+      <li id="s12"><a href="https://datacenterknowledge.com/investing/nvidia-invests-2b-more-in-coreweave-for-5-gw-data-center-push" target="_blank" rel="noopener noreferrer">Data Center Knowledge: NVIDIA invests $2B more in CoreWeave (Jan 2026)</a></li>
+      <li id="s13"><a href="https://www.nasdaq.com/articles/coreweaves-35-39b-capex-plan-can-ai-demand-justify-spend" target="_blank" rel="noopener noreferrer">Nasdaq: CoreWeave&rsquo;s $35&ndash;39B capex plan (Q2 2026)</a></li>
+      <li id="s14"><a href="https://www.fool.com/earnings/call-transcripts/2026/08/19/nebius-nbis-q2-2026-earnings-call-transcript/" target="_blank" rel="noopener noreferrer">Nebius Q2 2026 earnings call transcript</a></li>
+      <li id="s15"><a href="https://www.businesswire.com/news/home/20250220083724/en/Nebius-Group-N.V.-Announces-Fourth-Quarter-and-Full-Year-2024-Financial-Results" target="_blank" rel="noopener noreferrer">Nebius: Q4 and FY2024 results</a> and <a href="https://247wallst.com/investing/2026/02/12/nebius-groups-mushrooming-capex-overshadows-its-hypergrowth/" target="_blank" rel="noopener noreferrer">24/7 Wall St.: FY2025 results</a></li>
+      <li id="s16"><a href="https://www.datacenterdynamics.com/en/news/lambda-secures-1bn-private-debt-to-purchase-nvidia-gpus-report/" target="_blank" rel="noopener noreferrer">DCD: Lambda secures $1bn private debt to purchase NVIDIA GPUs</a></li>
+      <li id="s17"><a href="https://thenextweb.com/news/nvidia-invests-2-billion-in-nebius" target="_blank" rel="noopener noreferrer">The Next Web: NVIDIA invests $2 billion in Nebius (Mar 2026)</a></li>
+    </ol>
+    <p class="data-note"><strong>Methodology.</strong> Figures are in US dollars and taken as stated. No neocloud breaks out revenue by AI lab, so &ldquo;spent&rdquo; figures are bounded by customer-concentration disclosures where possible. Capex is used as the proxy for NVIDIA spend because no company discloses NVIDIA purchases directly. Commitments are maximum contract values and can include termination rights.</p>
+  </section>
+
+  <footer class="site-footer">
+    <span>Palo Alto Networks</span>
+  </footer>
+</body>
+</html>
