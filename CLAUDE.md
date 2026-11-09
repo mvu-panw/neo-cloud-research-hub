@@ -20,9 +20,9 @@ Use a server rather than opening `index.html` from disk. The home page loads `ne
 
 ## Structure
 
-- **Pages.** Each vendor has 5 pages named `{coreweave|lambda|nebius}-{regions|network-security|compute|blogs|newsroom}.html`. Each page is a `.page-header` plus a `.resource-grid` of `<a class="resource-card">` links to vendor docs. External links use `target="_blank" rel="noopener noreferrer"`. Each grid ends with a commented-out card template.
+- **Pages.** Each vendor has 5 pages named `{coreweave|lambda|nebius}-{regions|network-security|compute|blogs|newsroom}.html`. Each page is a `.page-header` plus a `.resource-grid` of `<a class="resource-card">` links to vendor docs. External links use `target="_blank" rel="noopener noreferrer"`. Each grid ends with a commented-out card template. Each vendor page also has a `.hub-launch` banner above its grid that opens that account's research site.
 - **`ai-district-braintrust.html`** is the one data page. It has stat cards and `.data-table` tables (inside a `.table-wrap` that scrolls sideways on mobile), with Disclosed/Reported/Estimate `.tag` labels and a numbered source list (`#sN` anchors). Its figures are hand-researched with an "as of" date. Update that date whenever you change a number.
-- **No templating.** The header/nav (three vendor dropdowns, the AI District Braintrust link, and an external MLPerf Dashboard link) and the footer are copy-pasted into all 17 HTML files. Adding a page or changing the nav means editing every file.
+- **No templating.** The header/nav (three vendor dropdowns, each ending in an external "Account Research ↗" link to that account's `mvu-panw.github.io/*_research` site, the AI District Braintrust link, and an external MLPerf Dashboard link) and the footer are copy-pasted into all 17 HTML files. Adding a page or changing the nav means editing every file.
 - **Cache-busting.** Every page links `css/styles.css?v=N`. When you change the CSS, bump `N` in all 17 files so they stay the same.
 - **Styling.** Everything is in `css/styles.css`. The Figtree font is self-hosted from `assets/fonts/Figtree font/` (the directory name contains a space). The layout is mobile-optimized, so check narrow widths after layout changes.
 

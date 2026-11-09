@@ -1,6 +1,6 @@
 ## CoreWeave
 
-**Account research:** [CoreWeave research site](https://mvu-panw.github.io/coreweave_research/)
+**Account research:** [CoreWeave research site](https://mvu-panw.github.io/coreweave_research/architecture.html)
 
 ### Latest (Oct–Nov 2026)
 
@@ -31,7 +31,7 @@
 
 ## Lambda AI
 
-**Account research:** [Lambda research site](https://mvu-panw.github.io/lambda_research/)
+**Account research:** [Lambda research site](https://mvu-panw.github.io/lambda_research/index.html)
 
 ### Latest (Oct–Nov 2026)
 
